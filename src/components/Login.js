@@ -20,6 +20,7 @@ import {
 
 
 class Login extends Component{
+  
     constructor(props){
         super(props)
         this.login = this.login.bind(this)
@@ -39,8 +40,7 @@ class Login extends Component{
   signInFlow: "popup",
   signInOptions: [
 
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+ 
       
   ],
 
@@ -97,7 +97,7 @@ class Login extends Component{
       <MDBRow>
         <MDBCol md="50">
           <MDBCard>
-            <MDBCardBody className="body black rounded">
+            <MDBCardBody className="body white rounded">
               <MDBCardHeader className="form-header deep-blue-gradient rounded">
                 <h3 className="my-12">
                   <MDBIcon icon="lock" /> Login:
@@ -132,11 +132,8 @@ class Login extends Component{
                 name="password"
               />
               <div className="text-center mt-4">
-                <MDBBtn color="light-blue" className="mb-3" type="submit" onClick={this.login}>
+                <MDBBtn color="light-blue" className="mb-100" type="submit" onClick={this.login}>
                   Login
-                </MDBBtn>
-                <MDBBtn color="light-blue" className="mb-3" type="submit" onClick={this.signup}>
-                  Signup
                 </MDBBtn>
               </div>
               <StyledFirebaseAuth

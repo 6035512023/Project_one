@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import fire from './config/Fire';
 import { BrowserRouter, Route} from 'react-router-dom';
 import Stock from './components/Stock';
+import SiderDemo from './components/SiderDemo';
 
 class App extends Component {
 
@@ -53,7 +54,7 @@ class App extends Component {
 
       <div>
         <BrowserRouter>
-          <Route exact path="/" component={Stock} />
+          <Route exact path="/" component={SiderDemo} />
           <Route path="/login" component={Login} />
         </BrowserRouter>
       </div>
